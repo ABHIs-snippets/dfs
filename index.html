@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+    <style>
+       
+    </style>
+</head>
+
+<body >
+    <main>
+        <div>
+            <h1>D F S</h1>
+            <br>
+            <div class="tags">
+                <img  id="startTag" src="./start.png" width="40px"   alt="" >
+            </div>
+            <div class="tags">
+                <img src="./end.png" width="40px"  alt=""  id="endTag" >
+            </div>
+            <div class="inst">
+                Choose start
+
+            </div>
+            <div style="display: flex; flex-direction:column;">
+                <div>
+                    <div class="slider">
+                        <h3 style="padding-bottom: 6px;">Speed</h3>
+                        <Input class="range" type="range" value="80" min="0" max="100" onchange="rangeSlide(this.value)"
+                            onmousemove="rangeSlide(this.value)"></Input>
+                    </div>
+                    <div style="display: flex; padding:12px 0">
+                        <div style="margin-right: 24px;">
+                            <p>Visited node color</p>
+                            <input type="color" onchange="changeVisitedColor(this.value)">
+                        </div>
+                        <div>
+                            <p>Path color</p>
+                            <input type="color" onchange="changePathColor(this.value)">
+                        </div>
+                    </div>
+                    <div class="slider">
+                        <h3 style="padding-bottom: 6px;">Maze Density</h3>
+                        <Input class="range" type="range" value="30" min="20" max="90" id="dense"></Input>
+                    </div>
+                    <div class="maze-size">
+                        <h3 style="padding-bottom: 6px;">Maze Size</h3>
+                        <Input type="number" value="60" min="10" max="100" id="xCord"></Input>
+                        &nbsp;
+                        &times;
+                        &nbsp;
+                        <Input type="number" value="90" min="20" max="200" id="yCord"></Input>
+                    </div>
+                    <button type="button" onclick="generatenNewMaze()">Generate Maze</button>
+                </div>
+
+            </div>
+        </div>
+        <div id="grid" >
+        </div>
+        <div class="analizer">
+            <div class="graph-contain">
+                <div class="graph">
+                    <div class="fill" id="fill"></div>
+                </div>
+                <p>Total visited nodes</p>
+            </div>
+            
+            <div class="graph-contain">
+                <div class="graph">
+                    <div class="fill" id="pathBar"></div>
+                </div>
+                <p>Path length</p>
+                </div>
+        </div>
+
+    </main>
+
+    <script src="./main.js">
+      
+    </script>
+</body>
+
+</html>

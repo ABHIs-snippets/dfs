@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: cursive;
+}
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.inst {
+    font-size: 18px;
+    margin: 12px 0;
+    text-align: left;
+    display: flex;
+}
+.tags img{
+    display: none;
+    position:  absolute;
+    left: 0;
+    top: 0; /* set these so Chrome doesn't return 'auto' from getComputedStyle */
+    width:24px; 
+}
+
+
+#grid { 
+    /* padding: 12px; */
+    height: min-content;
+    border: 15px solid #2d2d2d;
+    border-radius: 7px;
+    box-shadow: 0 0 4px 4px #ffffff56;
+    overflow: hidden;
+}
+
+#grid p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+span {
+    display: inline-block;
+    width: 8px;
+    /* border: 1px solid rgb(0, 0, 0); */
+    height: 8px;
+}
+
+.maze-size input {
+    width: 30%;
+    font-size: 18px;
+}
+
+.slider {
+    margin-bottom: 12px;
+}
+
+#rangeValue {
+    position: relative;
+    display: block;
+    text-align: center;
+    font-size: 2em;
+    color: #999;
+    font-weight: 400;
+}
+
+.range {
+    width: 300px;
+    height: 8px;
+    -webkit-appearance: none;
+    background: #2f2f2f;
+    outline: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 1);
+}
+
+.graph {
+    background: #2a2a2a;
+    height: 80%;
+    width: 28px;
+    box-shadow: 0 0 5px 3px #444444 inset;
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+}
+
+.fill {
+    width: 100%;
+    height: 0%;
+    background: green;
+    box-shadow: 0px 5px 7px 1px #6fc37c inset;
+}
+
+.range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #00fd0a;
+    cursor: pointer;
+    border: 3px solid #333;
+    box-shadow: -407px 0 0 400px #00fd0a;
+}
+
+
+
+button {
+    border: none;
+    outline: none;
+    font-size: 18px;
+    color: #fff;
+    background: #000;
+    border-radius: 18px;
+    box-shadow: 0 0 7px 1px rgb(212, 212, 212);
+    padding: 6px 24px;
+    margin: 28px;
+    margin-left: 0px;
+    cursor: pointer;
+}
+
+.graph-contain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.analizer {
+    display: flex;
+    gap: 24px;
+}
